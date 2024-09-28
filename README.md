@@ -1,9 +1,8 @@
 # C Coding Challenges
 
-##
-**Welcome to the Mouredev C Challenges repository!**
+## **Welcome to the C Challenges repository!**
 
-This project contains solutions to various coding challenges proposed by [MoureDev](__https://github.com/mouredev__) using the C programming language. Each challenge is implemented as a standalone program, demonstrating different algorithms, data structures, and problem-solving techniques.
+This project contains solutions to various coding challenges proposed by [MoureDev](https://github.com/mouredev) using the C programming language. Each challenge is implemented as a standalone program, demonstrating different algorithms, data structures, and problem-solving techniques.
 
 ## Project Structure
 
