@@ -11,9 +11,9 @@ int main() {
   while (count <= 100) {
     if (is_multiple_of_three_and_five(count)) {
       printf("fizzbuzz\n");
-    } else if (is_multiple_of_three(count) == is_true()) {
+    } else if (is_multiple_of_three(count)) {
       printf("fizz\n");
-    } else if (is_multiple_of_five(count) == is_true()) {
+    } else if (is_multiple_of_five(count)) {
       printf("buzz\n");
     } else {
       printf("%d\n", count);
@@ -25,7 +25,7 @@ int main() {
 }
 int is_multiple_of_three_and_five(int number) {
   int output = is_false();
-  if (is_multiple_of_three(number) == is_true() && is_multiple_of_five(number) == is_true()) {
+  if (is_multiple_of_three(number) && is_multiple_of_five(number)) {
     output = is_true();
   }
   return output;
