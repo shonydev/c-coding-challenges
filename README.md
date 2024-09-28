@@ -21,7 +21,7 @@ gcc -o build/main ./src/main.c && ./build/main
 
 ## Docker
 
-You can build image from Dockerfile use the folowwing command:
+You can build image from Dockerfile use the folowing command:
 
 ### Build:
 
