@@ -31,7 +31,7 @@ That way you will have a development environment for c inside your container wit
 
 ### Run:
 ```bash
-docker run -v "C:\Users\jonat\Documents\proyects\C:\app" -it main
+docker run -it main
 ```
 ### How to develop
 
