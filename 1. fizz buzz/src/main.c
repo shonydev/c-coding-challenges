@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "utils/print.c"
+#include <utils/print.h>
 
 int is_multiple_of_three(int number);
 int is_multiple_of_five(int number);

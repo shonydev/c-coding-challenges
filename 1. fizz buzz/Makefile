@@ -1,6 +1,6 @@
 # Compilador y flags
 CC := gcc
-CFLAGS := -Wall -Wextra -O2
+CFLAGS := -Wall -Wextra -O2 -Iinclude
 
 # Directorios
 SRC_DIR := src
@@ -11,17 +11,14 @@ BIN_DIR := bin
 # Nombre del ejecutable
 TARGET := $(BIN_DIR)/myapp
 
-# Encuentra todos los archivos .c usando wildcard
-SRCS := $(wildcard $(SRC_DIR)/*.c) $(wildcard $(SRC_DIR)/*/*.c)
-# SRCS := $(shell find $(SRC_DIR) -name '*.c')
+# Encuentra todos los archivos .c usando find
+SRCS := $(shell find $(SRC_DIR) -name '*.c')
 
 # Genera los nombres de los archivos objeto correspondientes
 OBJS := $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 
-SHON_DIR := include/shon
-
 # Flags de inclusión
-INCLUDE_FLAGS := -I$(INCLUDE_DIR) -I$(SHON_DIR)
+INCLUDE_FLAGS := -I$(INCLUDE_DIR)
 
 # Regla principal
 all: $(TARGET)
