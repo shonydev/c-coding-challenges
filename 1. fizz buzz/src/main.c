@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "utils/print.c"
 
 int is_multiple_of_three(int number);
 int is_multiple_of_five(int number);
@@ -21,6 +22,7 @@ int main() {
 
     count++;
   }
+  print("shon");
   return 0;
 }
 int is_multiple_of_three_and_five(int number) {

@@ -1,0 +1,17 @@
+{
+    "name": "GCC Container",
+    "dockerFile": "Dockerfile",
+    "appPort": [],
+    "workspaceFolder": "/app",
+    "extensions": [
+        "ms-vscode.cpptools"  // Asegúrate de tener instalada la extensión C/C++
+    ],
+    "settings": {
+        "C_Cpp.default.includePath": [
+            "/app/c-coding-challenges/1. fizz buzz/include",
+            "/app/c-coding-challenges/1. fizz buzz/include/utils",
+            "/app/c-coding-challenges/1. fizz buzz/**"
+        ]
+    },
+    "remoteUser": "root"  // Opcional, depende de cómo esté configurado tu Dockerfile
+}
