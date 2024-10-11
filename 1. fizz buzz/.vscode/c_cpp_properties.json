@@ -3,23 +3,14 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/include",
-                "${workspaceFolder}/include/utils",
-                "/usr/include",
-                "/usr/local/include"
+                // "${workspaceFolder}/**"
             ],
-            // "includePath": [
-            //     "${workspaceFolder}/c-coding-challenges//1. fizz buzz/include",
-            //     "${workspaceFolder}/c-coding-challenges//1. fizz buzz/include/utils",
-            //     "/usr/include",
-            //     "/usr/local/include"
-            // ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
-            "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "gcc-x64"
+            "compilerPath": "/usr/local/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
         }
     ],
     "version": 4
- }
+}
