@@ -7,6 +7,7 @@ SRC_DIR := src
 INCLUDE_DIR := include
 OBJ_DIR := obj
 BIN_DIR := bin
+BUILD_DIR := build
 
 # Nombre del ejecutable
 TARGET := $(BIN_DIR)/myapp
@@ -38,10 +39,23 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 
 # Regla para limpiar objetos y ejecutable
 clean:
-	rm -rf $(OBJ_DIR) $(BIN_DIR)
+	rm -rf $(OBJ_DIR) $(BIN_DIR) $(BUILD_DIR)
 
 # Regla para ejecutar el programa
 run: $(TARGET)
 	./$(TARGET)
 
-.PHONY: all clean run
+# Nueva regla para construir con CMake
+cmake-build:
+	mkdir -p $(BUILD_DIR)
+	cd $(BUILD_DIR) && cmake .. && make
+
+# Regla para limpiar la construcción de CMake
+cmake-clean:
+	rm -rf $(BUILD_DIR)
+
+# Regla para ejecutar los tests de CMake
+cmake-test: cmake-build
+	cd $(BUILD_DIR) && ctest
+
+.PHONY: all clean run cmake-build cmake-clean cmake-test
