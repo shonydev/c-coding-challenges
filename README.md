@@ -42,7 +42,7 @@ You can then use devcontainers to program inside the container.
 
 ### To run the proyect.
 ```bash
-make
+make run
 ```
 
 Go to the corresponding project directory.
