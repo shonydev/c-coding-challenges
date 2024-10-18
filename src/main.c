@@ -10,13 +10,14 @@ void pause() {
 int showMenu() {
     int option;
     printf("\033[2J\033[H");
-    printf("\nSHON\n");
+    printf("\nSHON\n\n");
     printf("1. Create user\n");
     printf("2. List users\n");
     printf("3. Update user\n");
     printf("4. Delete user\n");
     printf("5. Exit\n");
-    printf("Choose an option: ");
+
+    printf("\nChoose an option: ");
     scanf("%d", &option);
     cleanBuffer();
     return option;
@@ -27,10 +28,10 @@ void cleanBuffer() {
 }
 
 int main() {
-    int op;
+    int option;
     do {
-        op = showMenu();
-        switch(op) {
+        option = showMenu();
+        switch(option) {
             case 1:
                 printf("Creating user...\n");
                 pause();
@@ -56,7 +57,7 @@ int main() {
                 printf("Invalid option. Please try again.\n");
                 pause();
         }
-    } while (op != 5);
+    } while (option != 5);
 
     return 0;
 }
